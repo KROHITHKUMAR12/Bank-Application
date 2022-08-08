@@ -1,0 +1,28 @@
+
+<label for="ttype">Transfer type:</label>
+<select name="ttype" id="ttype" [(ngModel)]="transferType">
+  <option value="" disabled selected hidden>Select your option</option>
+  <option value="customer">Customers</option>
+  <option value="bank">Bank</option>
+</select>
+<br>
+<br>
+<label>Message Code:</label>
+<select  [(ngModel)]="msgCode">
+  <option value="" disabled selected hidden>Select your option</option>
+  <option value="c1">CHQB</option>
+  <option value="c2">CORT</option>
+  <option value="c2">HOLD</option>
+  <option value="c2">INTC</option>
+  <option value="c2">PHOB</option>
+  <option value="c2">PHOI</option>
+  <option value="c2">PHON</option>
+  <option value="c2">REPA</option>
+  <option value="c2">SDVA</option>
+</select>
+<br>
+<br>
+<label>Enter Transfer Amount:</label>
+<input type="text" [(ngModel)]="transferAmount" appOnlyNumber>
+<br><br>
+<button (click)="transferBalance()" >Transfer</button>
